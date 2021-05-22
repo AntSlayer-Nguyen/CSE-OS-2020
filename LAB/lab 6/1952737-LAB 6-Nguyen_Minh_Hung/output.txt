@@ -1,0 +1,132 @@
+------------------------------------------------------------------------- 
+-----------------------------First-fit alloc----------------------------- 
+------------------------------------------------------------------------- 
+Free region: 1024|
+Thread [ID = 1394]: NEED TO Alloc [  32 bytes] : 0x5640f1ec14b0-0x5640f1ec14cf
+Used region:   32|
+-----------------------------------------
+Free region:  992|
+Thread [ID = 1394]: NEED TO Alloc [  64 bytes] : 0x5640f1ec14d0-0x5640f1ec150f
+Used region:   64|  32|
+-----------------------------------------
+Free region:   928|
+Thread [ID = 1394]: NEED TO Free  [  32 bytes] : 0x5640f1ec14b0-0x5640f1ec14cf
+Used region:   64|
+-----------------------------------------
+Free region:   32| 928|
+Thread [ID = 1394]: NEED TO Alloc [  64 bytes] : 0x5640f1ec1510-0x5640f1ec154f
+Used region:   64|  64|
+-----------------------------------------
+Free region:    32| 864|
+Thread [ID = 1394]: NEED TO Free  [  64 bytes] : 0x5640f1ec1510-0x5640f1ec154f
+Used region:   64|
+-----------------------------------------
+Free region:   32| 864|  64|
+Thread [ID = 1395]: NEED TO Alloc [  32 bytes] : 0x5640f1ec14b0-0x5640f1ec14cf
+Used region:   32|  64|
+-----------------------------------------
+Free region:  864|  64|
+Thread [ID = 1395]: NEED TO Alloc [ 128 bytes] : 0x5640f1ec1550-0x5640f1ec15cf
+Used region:  128|  32|  64|
+-----------------------------------------
+Free region:  736|  64|
+Thread [ID = 1395]: NEED TO Alloc [  16 bytes] : 0x5640f1ec15d0-0x5640f1ec15df
+Used region:   16| 128|  32|  64|
+-----------------------------------------
+Free region:   720|  64|
+Thread [ID = 1395]: NEED TO Free  [  16 bytes] : 0x5640f1ec15d0-0x5640f1ec15df
+Used region:  128|  32|  64|
+-----------------------------------------
+Free region:  736|  64|
+Thread [ID = 1395]: NEED TO Alloc [ 128 bytes] : 0x5640f1ec15d0-0x5640f1ec164f
+Used region:  128| 128|  32|  64|
+-----------------------------------------
+---------------------------------END------------------------------------- 
+------------------------------------------------------------------------- 
+-----------------------------Best-fit alloc------------------------------ 
+------------------------------------------------------------------------- 
+Free region: 1024|
+Thread [ID = 1397]: NEED TO Alloc [  32 bytes] : 0x55ceeda3d4b0-0x55ceeda3d4cf
+Used region:   32|
+-----------------------------------------
+Free region:  992|
+Thread [ID = 1397]: NEED TO Alloc [  64 bytes] : 0x55ceeda3d4d0-0x55ceeda3d50f
+Used region:   64|  32|
+-----------------------------------------
+Free region:   928|
+Thread [ID = 1397]: NEED TO Free  [  32 bytes] : 0x55ceeda3d4b0-0x55ceeda3d4cf
+Used region:   64|
+-----------------------------------------
+Free region:   32| 928|
+Thread [ID = 1397]: NEED TO Alloc [  64 bytes] : 0x55ceeda3d510-0x55ceeda3d54f
+Used region:   64|  64|
+-----------------------------------------
+Free region:    32| 864|
+Thread [ID = 1397]: NEED TO Free  [  64 bytes] : 0x55ceeda3d510-0x55ceeda3d54f
+Used region:   64|
+-----------------------------------------
+Free region:   32| 864|  64|
+Thread [ID = 1398]: NEED TO Alloc [  32 bytes] : 0x55ceeda3d4b0-0x55ceeda3d4cf
+Used region:   32|  64|
+-----------------------------------------
+Free region:  864|  64|
+Thread [ID = 1398]: NEED TO Alloc [ 128 bytes] : 0x55ceeda3d550-0x55ceeda3d5cf
+Used region:  128|  32|  64|
+-----------------------------------------
+Free region:  736|  64|
+Thread [ID = 1398]: NEED TO Alloc [  16 bytes] : 0x55ceeda3d510-0x55ceeda3d51f
+Used region:   16| 128|  32|  64|
+-----------------------------------------
+Free region:   736|  48|
+Thread [ID = 1398]: NEED TO Free  [  16 bytes] : 0x55ceeda3d510-0x55ceeda3d51f
+Used region:  128|  32|  64|
+-----------------------------------------
+Free region:   16| 736|  48|
+Thread [ID = 1398]: NEED TO Alloc [ 128 bytes] : 0x55ceeda3d5d0-0x55ceeda3d64f
+Used region:  128| 128|  32|  64|
+-----------------------------------------
+---------------------------------END------------------------------------- 
+------------------------------------------------------------------------- 
+-----------------------------Worst-fit alloc----------------------------- 
+------------------------------------------------------------------------- 
+Free region: 1024|
+Thread [ID = 1400]: NEED TO Alloc [  32 bytes] : 0x55cf2d72c4b0-0x55cf2d72c4cf
+Used region:   32|
+-----------------------------------------
+Free region:  992|
+Thread [ID = 1400]: NEED TO Alloc [  64 bytes] : 0x55cf2d72c4d0-0x55cf2d72c50f
+Used region:   64|  32|
+-----------------------------------------
+Free region:   928|
+Thread [ID = 1400]: NEED TO Free  [  32 bytes] : 0x55cf2d72c4b0-0x55cf2d72c4cf
+Used region:   64|
+-----------------------------------------
+Free region:   32| 928|
+Thread [ID = 1400]: NEED TO Alloc [  64 bytes] : 0x55cf2d72c510-0x55cf2d72c54f
+Used region:   64|  64|
+-----------------------------------------
+Free region:    32| 864|
+Thread [ID = 1400]: NEED TO Free  [  64 bytes] : 0x55cf2d72c510-0x55cf2d72c54f
+Used region:   64|
+-----------------------------------------
+Free region:   32| 864|  64|
+Thread [ID = 1401]: NEED TO Alloc [  32 bytes] : 0x55cf2d72c550-0x55cf2d72c56f
+Used region:   32|  64|
+-----------------------------------------
+Free region:   32| 832|  64|
+Thread [ID = 1401]: NEED TO Alloc [ 128 bytes] : 0x55cf2d72c570-0x55cf2d72c5ef
+Used region:  128|  32|  64|
+-----------------------------------------
+Free region:   32| 704|  64|
+Thread [ID = 1401]: NEED TO Alloc [  16 bytes] : 0x55cf2d72c5f0-0x55cf2d72c5ff
+Used region:   16| 128|  32|  64|
+-----------------------------------------
+Free region:    32| 688|  64|
+Thread [ID = 1401]: NEED TO Free  [  16 bytes] : 0x55cf2d72c5f0-0x55cf2d72c5ff
+Used region:  128|  32|  64|
+-----------------------------------------
+Free region:   32| 704|  64|
+Thread [ID = 1401]: NEED TO Alloc [ 128 bytes] : 0x55cf2d72c5f0-0x55cf2d72c66f
+Used region:  128| 128|  32|  64|
+-----------------------------------------
+---------------------------------END------------------------------------- 

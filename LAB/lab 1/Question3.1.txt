@@ -1,0 +1,30 @@
+1. What are the advantages of Makefile? Give examples?
+Advantages:
+- It makes codes more concise and clear to read and debug.
+- No need to compile entire program every time whenever you make a change to a functionality or a class. Makefile will automatically compile only those files where 
+change has occurred.
+- Generally, in long codes or projects, Makefile is widely used in order to present project in more systematic and efficient way.
+
+Examples:
+Suppose you have a program that you have split into two files, which you have imaginatively named file1.c and file2.c.  You can compile the program by running
+
+gcc file1.c file2.c -o yourprogram
+But this requires recompiling both files every time, even if only one has changed.  You can decompose the compilation steps into
+
+gcc -c file1.c
+gcc -c file2.c
+gcc    file1.o file2.o -o yourprogram
+and then, when you edit one of the files, recompile only that file (and perform the linking step no matter what you changed).  But what if you edit one file, and then
+ the other, and you forget that you edited both files, and accidentally recompile only one?
+
+Also, even for just two files, you’ve got about 60 characters’ worth of commands there.  That quickly gets tedious to type.  OK, sure, you could put them into a 
+script, but then you’re back to recompiling every time.  Or you could write a really fancy, complicated script that checks what file(s) had been modified and does 
+only the necessary compilations.  Do you see where I’m going with this?
+
+2. In case of source code files located in different places, how can we write a Makefile?
+
+With makepp, you simply put a separate makefile in each directory that builds the relevant files in that directory. When a makefile refers to files whose build 
+commands are in different makefiles, makepp automatically finds the appropriate build rules in the other makefiles. All actions in each makefile are executed with
+the current directory set to be the directory containing the makefile, so each makefile can be written independently of all the others. No makefile has to know
+anything about the other makefiles; it does not even have to tell makepp to load the rules from those other makefiles.
+Makepp will figure out which of the processed data files need to be updated whenever some of the data files or analysis programs change.

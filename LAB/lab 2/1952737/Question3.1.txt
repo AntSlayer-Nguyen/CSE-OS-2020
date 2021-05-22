@@ -1,0 +1,42 @@
+1. What the output will be at LINE A? Does this value not change for
+every process executions? Explain your answer.
+
+- The output of LINE A is: PID of child process = 35 
+- No! This value always change for every process executions. We 
+already knew that PID is Process ID. getpid() would return the 
+process ID of the calling process and this is often used by routines 
+that generate unique temporary filenames. Therefore, when we run 
+the program, it gets his own pid, and then pid changes when we 
+run programm some times. In contrast, getppid() which return process
+ID of parent process, does not change, because parent process 
+for program is terminal, from which we ran programs. Thus, our 
+program always gives the different values of getpid() everytime.
+
+
+2. What the output will be at LINE C? Explain your answer.
+
+- The output of LINE C is: PARENT: value = 19
+- Explain: Both processes start their execution right after the 
+system call fork(). Since both processes have identical but separate 
+address spaces, those variables initialized (int value = 19) before
+the fork() call have the same values in both address spaces. Since 
+every process has its own address space, any modifications will be 
+independent of the others. In other words, if the child changes the 
+value of its variable (value += 15), the modification will only 
+affect the variable in the children process's address space. Other 
+address spaces created by fork() calls will not be affected even 
+though they have identical variable names.
+
+
+3. Remove line B from the program. Observe your display result onto the
+screen and give your remark.
+
+- The output is in reverse order to the output before. The parent process
+is executed and finished before the childprocess. The value is still equal 
+to 19.
+- Remark: Before removing LINE B, 2 processes are running concurrently,
+wait(NULL) will block parent process until any of its children has finished.
+Thus, we could see that childprocess finished first and output to the screen
+before the parent process. However, after removing LINE B,parent process has 
+finished or terminated before the childprocess and give the result in reversed 
+order, this is also called Orphan process.

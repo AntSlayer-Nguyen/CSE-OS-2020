@@ -1,0 +1,7 @@
+    1  mkdir 1952737
+    2  vim 1952737/example.txt
+    3  ls 1952737
+    4  cat 1952737/example.txt
+    5  head -5 1952737/example.txt
+    6  tail -5 1952737/example.txt
+    7  history > 1952737/1952737-history.txt
